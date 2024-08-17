@@ -59,7 +59,7 @@
                         <td>
                             <a href="{{ route('students.edit', $student->id) }}" type="button"
                                 class="btn btn-sm btn-light">Edit</a>
-                            <a href="{{ route('students.destroy, $student->id }}"
+                            <a href="{{ route('students.destroy', $student->id) }}"
                                 onclick="deleteStudent({{ $student->id }})" type="button"
                                 class="btn btn-sm btn-danger">Delete</a>
                             <form action="{{ route('students.destroy', $student->id) }}" method="post"

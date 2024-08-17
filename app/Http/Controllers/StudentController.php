@@ -109,7 +109,7 @@ class StudentController extends Controller
                 $student->save();
 
                 // Delete old photo record
-                File::delete(public_path() . '/uploads/students/', $oldFileName);
+                File::delete(public_path() . '/uploads/students/' . $oldFileName);
             }
 
             $request->session()->flash('success', 'Student updated successfully.');
@@ -126,7 +126,7 @@ class StudentController extends Controller
         $student = Student::findOrFail($id);
 
         // Delete old photo record
-        File::delete(public_path() . '/uploads/students/', $student->photo);
+        File::delete(public_path() . '/uploads/students/' . $student->photo);
 
         $student->delete();
 
